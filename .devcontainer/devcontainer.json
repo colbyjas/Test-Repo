@@ -1,0 +1,21 @@
+{
+  "name": "python-codespace",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.11"
+    }
+  },
+  "postCreateCommand": "pip install --upgrade pip && pip install -r requirements.txt && python -m ipykernel install --user --name=python311 --display-name='Python 3.11 (Codespace)'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "jupyter.alwaysTrustNotebooks": true
+      }
+    }
+  }
+}
